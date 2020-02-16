@@ -7,35 +7,37 @@
 clear, close all
 
 % Source files folder (.pcap)
-input = 'H:\lidar_09_02';
+input = 'C:\Users\jason\Desktop\Dense  point  cloud  acquisition  with  a  low-cost  Velodyne  VLP-16';
 % Result folder
 mkdir result
 output ='result\';
 
 % input file name
-input_file_name = 'rol_str_8.pcap';
+input_file_name = 'baulmes_demo.pcap';
 
 % output file name
-output_file_name = 'STR8_';
+output_file_name = 'calibration_';
 
 cd(input)
 
 %% Initialization of parameters 
 
-times = 900; % Scan duration in tenths of a second (sec^-1) 
+times = 1800; % Scan duration in tenths of a second (sec^-1) 
 angle = 360; % LiDAR rotation angle
-first = 1; % Time at the first frame
+first = 199; % Time at the first frame
 
 %% Export parameters
 % Set to 0 to keep all the points
 % Set to 1 to keep the x-positives values
-% Set to 2 to keep the x-negatives values
+% Set to 2 to keep the y-negatives values
+pos = 1;
 
-pos = 1; 
 
 % Set to 0 to keep save the band 1 and 16
 % Set to 1 to keep all the values
-pos2 = 1;
+% Set to 2 to keep only band 8
+
+pos2 = 0;
 
 %Set the grid resolution in [m] 
 %Set to 0 to keep all the values
@@ -45,12 +47,12 @@ gridStep = 0;
 % Correction angle alpha_1 and alpha_2 [degrees]
 % Those angle are determined automatically after calibration or be chosen
 
-alpha_1 = 0; %0.36;
-alpha_2 = 0.5;
+alpha_1 = 0.01;
+alpha_2 = [-0.735500000000001]; %initial 0.5
 %alpha_3 = 1;
 % Arm length [m]
-R =     -0.00   ;
-theta3 = -0.55;
+R =     -0.0   ;
+theta3 = -0.0; %initial -055
 
 
 
@@ -82,7 +84,7 @@ for i = 2 : length(angle) % Runs as many times as there are frames
 % Apply export parameters  
 if pos == 1   
     
-    ptCloudIn3 =  ptCloudIn.Location(1,:,1);
+    ptCloudIn3 =  ptCloudIn.Location(:,:,1);
     ptCloudIn3(isnan(ptCloudIn3))=0;
     ptCloudIn3(ptCloudIn3<0)=0;
     ptCloudIn3(ptCloudIn3>0)=1;
@@ -91,7 +93,7 @@ end
 
 if pos == 2   
     
-    ptCloudIn3 =  ptCloudIn.Location(1,:,1);
+    ptCloudIn3 =  ptCloudIn.Location(:,:,1);
     ptCloudIn3(isnan(ptCloudIn3))=0;
     ptCloudIn3(ptCloudIn3>0)=0;
     ptCloudIn3(ptCloudIn3<0)=1;
@@ -103,10 +105,11 @@ clear ptCloudIn2 ptCloudIn3
 % Transformation of each image
 % Définition des matrices de transformation
 
-% Alignment correction as a function of motor speed
+% Alignment correction as a function of motor speed (y-axis)
 VM = [cos(angle(i)) 0 sin(angle(i)) 0; 0 1 0 0; -sin( angle(i)) 0 ...
       cos(angle(i)) 0; 0 0 0 1];
-% Alpha_1 correction
+
+  % Alpha_1 correction (x-axis)
 A1 = [1 0 0 0; 0 cosd(alpha_1) sind(alpha_1) 0 ; ...
       0 -sind(alpha_1) cosd(alpha_1) 0 ; 0 0 0 1];  
   
@@ -155,6 +158,9 @@ else
     bandNumber = 2;
 end
 
+if pos2 == 2
+    bandNumber = 1;
+end
 
 %% Point cloud merging 
 
@@ -162,12 +168,17 @@ for bande_sep = 1 : bandNumber
     
 if pos2 == 1 
     iiii=bande_sep;
-else 
-    
+end
+
+if pos2 == 0    
     Bande_calibration = [1 16];
     iiii = Bande_calibration(bande_sep);
 end
 
+if pos2 == 2    
+    Bande_calibration = 8;
+    iiii = Bande_calibration(bande_sep);
+end
 
 % Variable initialization
 x = [];
@@ -230,6 +241,10 @@ end
 
 %% Reconstruction of the point cloud
 ref = [X_ref_final; Y_ref_final; Z_ref_final]'; 
+%ref2{pos} = [X_ref_final; Y_ref_final; Z_ref_final]'; 
+%disp('ref')    
+
+
 PC_corr1 = pointCloud(ref);
 
 if gridStep == 0
@@ -252,11 +267,11 @@ cd(output)
 pcwrite(PC_Final1,Nom_fichier,'PLYFormat','binary');
 
 cd(input)
-ref = []; % suppression of the loaded point cloud
+%ref = []; % suppression of the loaded point cloud
 disp([num2str(iiii) ' of 16'])
 end
 
-disp('Densification completed')
 
+disp('Densification completed')
 
 
