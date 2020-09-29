@@ -6,7 +6,7 @@ This  study  develops  a  method  to  acquire  densepoint  clouds  with  a  low-
 
 Instructions to run the codes
 
-- First, download the example point cloud at this link: https://www109.zippyshare.com/v/EbxdH7My/file.html
+- First, download the example point cloud at this link: https://www96.zippyshare.com/v/DoaqH8zs/file.html
 - The .pcap file must be in the same folder as main_demo.m
 - The parameters for running the code have already been initialized and concern the rotation speed, motor synchronization, arm calibration and alpha1 parameters and alpha2.
 - Run main_demo. This code create 16 ply files corresponding to the 16 bands of scan. These files can then ben merged.
