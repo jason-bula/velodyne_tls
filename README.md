@@ -1,6 +1,6 @@
 # velodyne_tls
 
-This  study  develops  a  method  to  acquire  densepoint  clouds  with  a  low-cost  Velodyne  VLP-16  lidar  system,without using expensive GNSS positioning or IMU. Our settingconsists  in  mounting  the  lidar  on  a  motor  to  continuouslychange the scan direction, which leads to a significant increasein  the  point  cloud  density.  A  post-treatment  reconstructs  theposition of each point accounting for the motor angle at the timeof acquisition, and a calibration step accounts for inaccuraciesin  the  hardware  assemblage.  The  system  is  tested  in  indoorssettings  such  as  buildings  and  abandoned  mines,  but  is  alsoexpected  to  give  good  results  outdoors. 
+This  study  develops  a  method  to  acquire  densepoint  clouds  with  a  low-cost  Velodyne  VLP-16  lidar  system, without using expensive GNSS positioning or IMU. Our setting consists  in  mounting  the  lidar  on  a  motor  to  continuously change the scan direction, which leads to a significant increasein  the  point  cloud  density.  A  post-treatment  reconstructs  the position of each point accounting for the motor angle at the timeof acquisition, and a calibration step accounts for inaccuracies in  the  hardware  assemblage.  The  system  is  tested  in  indoors settings  such  as  buildings  and  abandoned  mines,  but  is  also expected  to  give  good  results  outdoors. 
 
 
 
