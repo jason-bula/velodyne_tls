@@ -9,7 +9,7 @@ For any question please contact me on : jason.bula@unil.ch
 
 Instructions to run the codes
 
-- First, download the example point cloud at this link: https://www96.zippyshare.com/v/DoaqH8zs/file.html
+- First, download the example point cloud at this link: https://e.pcloud.link/publink/show?code=XZVD17ZUQLyMjOcDEHMXgtKtdvjNSA4E3pX
 - The .pcap file must be in the same folder as main_demo.m
 - The parameters for running the code have already been initialized and concern the rotation speed, motor synchronization, arm calibration and alpha1 parameters and alpha2.
 - Run main_demo. This code create 16 ply files corresponding to the 16 bands of scan. These files can then ben merged.
