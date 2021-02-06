@@ -113,6 +113,6 @@ Initially, the code generates 16 point clouds corresponding to each scan strip. 
 
 <iframe src="https://player.vimeo.com/video/390553933" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 Example of lidar scan 
-![](name-of-giphy.gif)
+![](lidar1.gif)
 
 <iframe src="https://player.vimeo.com/video/380239565" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
