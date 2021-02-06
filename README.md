@@ -15,11 +15,12 @@ Instructions to run the codes
 - Run main_demo. This code create 16 ply files corresponding to the 16 bands of scan. These files can then ben merged.
 - The optimisation parameters can be checked with the function calibration_alpha1.m and calibration_alpha2.m called by the calibration_demo.m file.
 
-==================================================================================================================
 
-Instruction supplements for the use of the system in the field
+<h1>Instruction supplements for the use of the system in the field</h1>
 
-Assembly of the system
+
+<h2>Assembly of the system</h2>
+
 1) Install the motor on the tripod
 2) Place the slip ring and its metal rod on the motor.
 3) Screw the lidar to the metal elbow. Caution: the lidar cable must point exactly against the bottom of the lidar. 
@@ -28,17 +29,62 @@ Assembly of the system
 
 Notes: By tightening the screws correctly, the backlash between the system components should be avoided as much as possible. The tripod does not necessarily need to be level, but it is preferable. 
 
-Software :
+<h2>Software :</h2>
+
 1) Install the "Syrp Genie mini" application on a smartphone (tested on v2.7.6)
 2) Install veloview (software present on the USB key provided with the lidar)
 3) Download the demo file here : https://github.com/jason-bula/velodyne_tls/blob/master/demo_main.m and open it with Matlab
 
-Example of configuration :
+
+<h2>Example of configuration :</h2>
 The acquisition time may vary, the slower the motor rotation, the better the resolution. Scans lasting between 3 and 6 minutes are preferable. To avoid measuring the acceleration and deceleration of the motor, the rotation is done on more than 360 degrees and is started before the acquisition. 
 Configuration for a rotation of 3,4 and 6 minutes
 
-Angle de rotation (degrés)	Temps d’acquisition (s)	Temps de rotation pour 360 degrés (s)	Vitesse de rotation : 1 degré / seconde
-370	370 	360	1
-375	250	240	1.5
-380	190	180	2
 
+
+
+
+| Rotation angle (degrees) | Acquisition time (s)  | Rotation time for 360 degrees (s) | Rotation speed: 1 degree / second  |
+| :---                      |     :---:             |          :---:                    |          ---:                      |
+| 370                         |    370                   |   360                                |1                                    |
+| 375                      | 250           | 240                                                          |1.5           |
+| 380                      | 190         | 180                                                          |2             |
+
+
+<h2>Acquisition on the field :</h2>
+
+1) In the application Syrp Genie mini :
+  a.	Connect the smartphone to the engine
+  b.	Click on " video ".
+  c.	Set a rotation according to Table 1 for clockwise rotation
+
+2)	Open/Sensor Stream/VLP 16
+  a.	Open/Sensor Stream/VLP 16
+  b.	Record button/name the file (do not save yet)
+  
+  
+  
+3) Taking measurements: be sure not to obstruct the field of view of the lidar.
+  a.	Start the engine from "Syrp Genie Mini".
+  b.	According to the settings in table 1, you have 10 seconds to press "save" in veloview.
+  c.	Wait for the end of the scan
+  d.	Stop acquisition from veloview 
+  
+ <h2> Post-processing of data acquired in the field</h2>
+ 
+Calibration :
+The system has been modified compared to the system presented in the article. The alpha 1 and alpha 2 parameters vary much less than in the previous version but can still be calibrated using the files: "Calibration_demo.m and alpha1/alpha2_calibration.m" https://github.com/jason-bula/velodyne_tls
+To start the calibration, use Calibration_demo.m with the same parameters as for main_demo below.
+
+
+1) Open main_demo in Matlab
+a.	Set input file directories (.pcap file)
+b.	Set time variable in tenths of second : (ie: 3600 for 6min, 2400 for 4min and 1800 for 3min)
+c.	Set the rotation angle (=360)
+d.	Set time at the first frame (= 1)
+e.	Set alpha1 and alpha2 = 0 (or with new calibration parameter)
+f.	R = 0
+
+2) For the other parameter, read the comments in the code. These parameters can remain by default.
+
+Initially, the code generates 16 point clouds corresponding to each scan strip. These files can be easily merged to create a single high density point cloud.
