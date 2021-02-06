@@ -1,13 +1,13 @@
 # Velodyne_tls
 
-This  study  develops  a  method  to  acquire  densepoint  clouds  with  a  low-cost  Velodyne  VLP-16  lidar  system, without using expensive GNSS positioning or IMU. Our setting consists  in  mounting  the  lidar  on  a  motor  to  continuously change the scan direction, which leads to a significant increasein  the  point  cloud  density.  A  post-treatment  reconstructs  the position of each point accounting for the motor angle at the timeof acquisition, and a calibration step accounts for inaccuracies in  the  hardware  assemblage.  The  system  is  tested  in  indoors settings  such  as  buildings  and  abandoned  mines,  but  is  also expected  to  give  good  results  outdoors. 
+This study develops a method to acquire dense point clouds with a low-cost Velodyne VLP-16 lidar system, without using expensive GNSS positioning or IMU. Our setting consists in mounting the lidar on a motor to continuously change the scan direction, which leads to a significant increase in the point cloud density.  A post-treatment reconstructs the position of each point accounting for the motor angle at the time of acquisition, and a calibration step accounts for inaccuracies in the hardware assemblage. The system is tested in indoors settings such as buildings and abandoned mines, but is also expected to give good  results outdoors. 
 
 The research associated with this work is available here : https://doi.org/10.5194/gi-9-385-2020, 2020
 For any question please contact me on : jason.bula@unil.ch
 
 
 
-Instructions to run the codes
+Instructions to run the codes with the demo file
 
 - First, download the example point cloud at this link: https://e.pcloud.link/publink/show?code=XZVD17ZUQLyMjOcDEHMXgtKtdvjNSA4E3pX
 - The .pcap file must be in the same folder as main_demo.m
@@ -23,7 +23,7 @@ Instructions to run the codes
 
 1) Install the motor on the tripod
 2) Place the slip ring and its metal rod on the motor.
-3) Screw the lidar to the metal elbow. Caution: the lidar cable must point exactly against the bottom of the lidar. 
+3) Screw the lidar to the metal elbow. Caution: the lidar cable must point <b>exactly against the bottom</b> of the lidar. 
 4) Connect the connections between the slip ring, lidar and power supply.
 5) Connect the Ethernet cable to the laptop computer
 
@@ -57,7 +57,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
  <ol type="a">
    <li>Connect the smartphone to the motor</li>
    <li>Click on " video "</li>
-   <li>	Set a rotation according to Table 1 for clockwise rotation</li>
+ <li>	Set a rotation according to Table 1 for <b>clockwise</b> rotation</li>
  </ol>
 
 
@@ -73,7 +73,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
 3) Taking measurements: be sure not to obstruct the field of view of the lidar.
 <ol type="a">
   <li>Start the motor from "Syrp Genie Mini".</li>
-  <li>According to the settings in table 1, you have 10 seconds to press "save" in veloview</li>
+  <li>According to the settings in table 1, you have <b>10 seconds</b> to press "save" in veloview</li>
   <li>Wait for the end of the scan</li>
   <li>Stop acquisition from veloview </li>
 
