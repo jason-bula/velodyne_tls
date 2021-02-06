@@ -38,7 +38,8 @@ Notes: By tightening the screws correctly, the backlash between the system compo
 
 <h2>Example of configuration :</h2>
 The acquisition time may vary, the slower the motor rotation, the better the resolution. Scans lasting between 3 and 6 minutes are preferable. To avoid measuring the acceleration and deceleration of the motor, the rotation is done on more than 360 degrees and is started before the acquisition. 
-Configuration for a rotation of 3,4 and 6 minutes
+
+ <p>Table 1 : Configuration for a rotation of 3,4 and 6 minutes</p>
 
 
 
