@@ -109,10 +109,6 @@ To start the calibration, use Calibration_demo.m with the same parameters as for
 <p>
 Initially, the code generates 16 point clouds corresponding to each scan strip. These files can be easily merged to create a single high density point cloud. The point cloud can be denoised and assemble in CloudCompare.
 </p>
-<iframe src="https://player.vimeo.com/video/**yourvideonumberhere**" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-<iframe src="https://player.vimeo.com/video/390553933" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-Example of lidar scan 
+
 ![](lidar1.gif)
-
-<iframe src="https://player.vimeo.com/video/380239565" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
