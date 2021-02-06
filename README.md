@@ -53,24 +53,31 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
 
 
 <h2>Acquisition on the field :</h2>
-
 1) In the application Syrp Genie mini :
-  a.	Connect the smartphone to the engine
-  b.	Click on " video ".
-  c.	Set a rotation according to Table 1 for clockwise rotation
+ <ol type="a">
+  <li>Connect the smartphone to the engine</li>
+  <li>Click on " video "</li>
+  <li>	Set a rotation according to Table 1 for clockwise rotation</li>
+ </ol>
+
 
 2)	Open/Sensor Stream/VLP 16
-  a.	Open/Sensor Stream/VLP 16
-  b.	Record button/name the file (do not save yet)
+<ol type="a">
+  <li> a.	Open/Sensor Stream/VLP 16</li>
+  <li>Record button/name the file (do not save yet)</li>
+
   
   
   
 3) Taking measurements: be sure not to obstruct the field of view of the lidar.
-  a.	Start the engine from "Syrp Genie Mini".
-  b.	According to the settings in table 1, you have 10 seconds to press "save" in veloview.
-  c.	Wait for the end of the scan
-  d.	Stop acquisition from veloview 
-  
+<ol type="a">
+  <li>Start the engine from "Syrp Genie Mini".</li>
+  <li>According to the settings in table 1, you have 10 seconds to press "save" in veloview</li>
+  <li>Wait for the end of the scan</li>
+  <li>Stop acquisition from veloview </li>
+
+ </ol>
+
  <h2> Post-processing of data acquired in the field</h2>
  
 Calibration :
@@ -79,13 +86,14 @@ To start the calibration, use Calibration_demo.m with the same parameters as for
 
 
 1) Open main_demo in Matlab
-a.	Set input file directories (.pcap file)
-b.	Set time variable in tenths of second : (ie: 3600 for 6min, 2400 for 4min and 1800 for 3min)
-c.	Set the rotation angle (=360)
-d.	Set time at the first frame (= 1)
-e.	Set alpha1 and alpha2 = 0 (or with new calibration parameter)
-f.	R = 0
-
+<ol type="a">
+  <li>Set input file directories (.pcap file)</li>
+  <li>Set time variable in tenths of second : (ie: 3600 for 6min, 2400 for 4min and 1800 for 3min)</li>
+  <li>Set the rotation angle (=360)</li>
+  <li>Set time at the first frame (= 1)</li>
+   <li>Set alpha1 and alpha2 = 0 (or with new calibration parameter)</li>
+   <li>R = 0</li>
+ </ol>
 2) For the other parameter, read the comments in the code. These parameters can remain by default.
 
 Initially, the code generates 16 point clouds corresponding to each scan strip. These files can be easily merged to create a single high density point cloud.
