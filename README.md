@@ -27,7 +27,7 @@ Instructions to run the codes
 4) Connect the connections between the slip ring, lidar and power supply.
 5) Connect the Ethernet cable to the laptop computer
 
-Notes: By tightening the screws correctly, the backlash between the system components should be avoided as much as possible. The tripod does not necessarily need to be level, but it is preferable. 
+Notes: By tightening the screws correctly, the backlash between the system components should be avoided as much as possible. The tripod does not necessarily need to be leveled, but it is preferable. 
 
 <h2>Software :</h2>
 
@@ -37,7 +37,7 @@ Notes: By tightening the screws correctly, the backlash between the system compo
 
 
 <h2>Example of configuration :</h2>
-The acquisition time may vary, the slower the motor rotation, the better the resolution. Scans lasting between 3 and 6 minutes are preferable. To avoid measuring the acceleration and deceleration of the motor, the rotation is done on more than 360 degrees and is started before the acquisition. 
+The acquisition time may vary, the slower the motor rotate, better is the resolution. Scans lasting between 3 and 6 minutes are preferable. To avoid measuring the acceleration and deceleration of the motor, the rotation is done on more than 360 degrees and is started before the acquisition. 
 
  <p>Table 1 : Configuration for a rotation of 3,4 and 6 minutes</p>
 
