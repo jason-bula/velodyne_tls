@@ -61,14 +61,15 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
  </ol>
 
 
-2)	Open/Sensor Stream/VLP 16 :
+<p>
+ 2)	Open/Sensor Stream/VLP 16 :
  <ol type="a">
   <li> a.	Open/Sensor Stream/VLP 16</li>
   <li>Record button/name the file (do not save yet)</li>
  </ol>
+</p>
   
-  
-  
+<p>  
 3) Taking measurements: be sure not to obstruct the field of view of the lidar.
 <ol type="a">
   <li>Start the engine from "Syrp Genie Mini".</li>
@@ -77,14 +78,14 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
   <li>Stop acquisition from veloview </li>
 
 </ol>
-
+</p>
  <h2> Post-processing of data acquired in the field</h2>
  
 Calibration :
 The system has been modified compared to the system presented in the article. The alpha 1 and alpha 2 parameters vary much less than in the previous version but can still be calibrated using the files: "Calibration_demo.m and alpha1/alpha2_calibration.m" https://github.com/jason-bula/velodyne_tls
 To start the calibration, use Calibration_demo.m with the same parameters as for main_demo below.
 
-
+<p>
 1) Open main_demo in Matlab
 <ol type="a">
   <li>Set input file directories (.pcap file)</li>
@@ -94,6 +95,11 @@ To start the calibration, use Calibration_demo.m with the same parameters as for
   <li>Set alpha1 and alpha2 = 0 (or with new calibration parameter)</li>
   <li>R = 0</li>
  </ol>
+ 
+</p>
+
+<p>
 2) For the other parameter, read the comments in the code. These parameters can remain by default.
 
 Initially, the code generates 16 point clouds corresponding to each scan strip. These files can be easily merged to create a single high density point cloud.
+</p>
