@@ -55,17 +55,17 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
 <h2>Acquisition on the field :</h2>
 1) In the application Syrp Genie mini :
  <ol type="a">
-  <li>Connect the smartphone to the engine</li>
-  <li>Click on " video "</li>
-  <li>	Set a rotation according to Table 1 for clockwise rotation</li>
+   <li>Connect the smartphone to the engine</li>
+   <li>Click on " video "</li>
+   <li>	Set a rotation according to Table 1 for clockwise rotation</li>
  </ol>
 
 
-2)	Open/Sensor Stream/VLP 16
-<ol type="a">
+2)	Open/Sensor Stream/VLP 16 :
+ <ol type="a">
   <li> a.	Open/Sensor Stream/VLP 16</li>
   <li>Record button/name the file (do not save yet)</li>
-
+ </ol>
   
   
   
@@ -76,7 +76,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
   <li>Wait for the end of the scan</li>
   <li>Stop acquisition from veloview </li>
 
- </ol>
+</ol>
 
  <h2> Post-processing of data acquired in the field</h2>
  
@@ -91,8 +91,8 @@ To start the calibration, use Calibration_demo.m with the same parameters as for
   <li>Set time variable in tenths of second : (ie: 3600 for 6min, 2400 for 4min and 1800 for 3min)</li>
   <li>Set the rotation angle (=360)</li>
   <li>Set time at the first frame (= 1)</li>
-   <li>Set alpha1 and alpha2 = 0 (or with new calibration parameter)</li>
-   <li>R = 0</li>
+  <li>Set alpha1 and alpha2 = 0 (or with new calibration parameter)</li>
+  <li>R = 0</li>
  </ol>
 2) For the other parameter, read the comments in the code. These parameters can remain by default.
 
