@@ -55,7 +55,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
 <h2>Acquisition on the field :</h2>
 1) In the application Syrp Genie mini :
  <ol type="a">
-   <li>Connect the smartphone to the engine</li>
+   <li>Connect the smartphone to the motor</li>
    <li>Click on " video "</li>
    <li>	Set a rotation according to Table 1 for clockwise rotation</li>
  </ol>
@@ -72,7 +72,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
 <p>  
 3) Taking measurements: be sure not to obstruct the field of view of the lidar.
 <ol type="a">
-  <li>Start the engine from "Syrp Genie Mini".</li>
+  <li>Start the motor from "Syrp Genie Mini".</li>
   <li>According to the settings in table 1, you have 10 seconds to press "save" in veloview</li>
   <li>Wait for the end of the scan</li>
   <li>Stop acquisition from veloview </li>
