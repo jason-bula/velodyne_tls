@@ -62,7 +62,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
 
 
 <p>
- 2)	Open/Sensor Stream/VLP 16 :
+ 2)	In Veloview :
  <ol type="a">
   <li> a.	Open/Sensor Stream/VLP 16</li>
   <li>Record button/name the file (do not save yet)</li>
