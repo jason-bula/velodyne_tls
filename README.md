@@ -57,7 +57,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
  <ol type="a">
    <li>Connect the smartphone to the motor</li>
    <li>Click on " video "</li>
- <li>	Set a rotation according to Table 1 for <b>clockwise</b> rotation</li>
+ <li>	Set a rotation according to Table 1 for <b>clockwise</b> rotation (ie: 370 degree in 370 s)</li>
  </ol>
 
 
