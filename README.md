@@ -102,9 +102,7 @@ To start the calibration, use Calibration_demo.m with the same parameters as for
 2) For the other parameter, read the comments in the code. These parameters can remain by default.
 </p>
 
-<p>
- 3) Run the script
-</p)
+<p>3) Run the script.</p)
 
 <p>
 Initially, the code generates 16 point clouds corresponding to each scan strip. These files can be easily merged to create a single high density point cloud. The point cloud can be denoised and assemble in CloudCompare.
