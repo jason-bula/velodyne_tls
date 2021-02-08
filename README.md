@@ -24,7 +24,7 @@ Instructions to run the codes with the demo file
 1) Install the motor on the tripod
 2) Place the slip ring and its metal rod on the motor.
 3) Screw the lidar to the metal elbow. Caution: the lidar cable must point <b>exactly against the bottom</b> of the lidar. 
-4) Connect the connections between the slip ring, lidar and power supply.
+4) Connect the cables between the slip ring, lidar and power supply.
 5) Connect the Ethernet cable to the laptop computer
 
 Notes: By tightening the screws correctly, the backlash between the system components should be avoided as much as possible. The tripod does not necessarily need to be leveled, but it is preferable. 
@@ -45,7 +45,7 @@ The acquisition time may vary, the slower the motor rotate, better is the resolu
 
 
 
-| Rotation angle (degrees) | Acquisition time (s)  | Rotation time for 360 degrees (s) | Rotation speed: 1 degree / second  |
+| Rotation angle (degrees) | Acquisition time (s)  | Rotation time for 360 degrees (s) | Rotation speed: degree / second  |
 | :---                      |     :---:             |          :---:                    |          ---:                      |
 | 370                         |    370                   |   360                                |1                                    |
 | 375                      | 250           | 240                                                          |1.5           |
