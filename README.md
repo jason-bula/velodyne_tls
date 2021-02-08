@@ -110,3 +110,5 @@ Initially, the code generates 16 point clouds corresponding to each scan strip. 
 
 
 ![](lidar1.gif)
+
+![](lidar2.gif)
