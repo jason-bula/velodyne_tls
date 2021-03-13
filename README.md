@@ -3,7 +3,7 @@
 This study develops a method to acquire dense point clouds with a low-cost Velodyne VLP-16 lidar system, without using expensive GNSS positioning or IMU. Our setting consists in mounting the lidar on a motor to continuously change the scan direction, which leads to a significant increase in the point cloud density.  A post-treatment reconstructs the position of each point accounting for the motor angle at the time of acquisition, and a calibration step accounts for inaccuracies in the hardware assemblage. The system is tested in indoors settings such as buildings and abandoned mines, but is also expected to give good  results outdoors. 
 
 The research associated with this work is available here : https://doi.org/10.5194/gi-9-385-2020, 2020
-For any question please contact me on : jason.bula@unil.ch
+For any question please contact me on : jason-bula@hotmail.com
 
 
 
